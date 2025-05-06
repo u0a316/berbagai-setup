@@ -1,0 +1,36 @@
+#!/bin/bash
+
+PACKAGES=""
+PACKAGES+=" printf" #untuk menggambar border/bingkai dan sistem
+PACKAGES+=" bc" # untuk menggambar border/bingkai dan sistem
+PACKAGES+=" gawk" # gawk daripada busybox awk untuk kompabilitas lebih baik
+PACKAGES+=" termux-api" # wajib untuk menampilkan status battre dan digunakan untuk brandomusicx dan lain2.
+PACKAGES+=" wc" # digunakan untuk menggambar border dan sistem
+PACKAGES+=" gdb" # digunakan untuk fungsi external tidak wajib
+PACKAGES+=" getconf" # digunakan untuk sistem
+PACKAGES+=" mapfile" # digunakan untuk keperluan buat file addon
+PACKAGES+=" sed" # digunakan oleh beberapa alat wajib
+PACKAGES+=" xargs" digunakan oleh beberapa alat wajib
+PACKAGES+=" grep" # digunakan oleh beberapa alat wajib
+PACKAGES+=" tput" # digunakan untuk pewarnaan 
+PACKAGES+=" busybox" # digunakan untuk brandomusic, uptimes dan kebanyakan alat lain.
+PACKAGES+=" tail" # untuk keperluan sistem
+PACKAGES+=" head" # untuk keperluan sistem
+PACKAGES+=" jq" # untuk fitur tambahan
+PACKAGES+=" basename" # untuk keperluan sistem
+PACKAGES+=" dirname" # untuk keperluan sistem
+PACKAGES+=" git" # untuk mengupdate alrc
+PACKAGES+=" curl" # digunakan untuk instalasi cepat
+PACKAGES+=" fzf" # untuk alias tidak wajib
+PACKAGES+=" find" # untuk keperluan sistem dan fitur
+PACKAGES+=" proot-distro" # untuk keperluan fitur
+PACKAGES+=" shuf" # untuk keperluan sistem
+PACKAGES+=" test" # untuk keperluan sistem
+PACKAGES+=" cp" # untuk keperluan sistem
+PACKAGES+=" cat" # untuk keperluan sistem
+PACKAGES+=" sort" # untuk keperluan sistem
+PACKAGES+=" uniq" #untuk keperluan sistem
+
+apt update
+apt dist-upgrade -y
+apt install -y $PACKAGES
